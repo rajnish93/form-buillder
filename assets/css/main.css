@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for form builder */
+.form-builder-container {
+  @apply h-screen flex flex-col overflow-hidden;
+}
+
+.toolbox-panel {
+  @apply w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto h-full;
+}
+
+.editor-panel {
+  @apply w-96 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto h-full;
+}
+
+.preview-panel {
+  @apply flex-1 bg-gray-50 dark:bg-gray-900 overflow-y-auto p-6 min-h-0;
+}
+
+.field-item {
+  @apply p-3 mb-2 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 
+         hover:border-primary-500 dark:hover:border-primary-400 hover:shadow-md transition-all cursor-pointer;
+}
+
+.field-item-selected {
+  @apply border-primary-500 dark:border-primary-400 bg-primary-50 dark:bg-primary-900/20 shadow-md;
+}
+
+.drag-handle {
+  @apply flex-shrink-0;
+}
+
+.drag-handle:hover {
+  @apply bg-gray-200 dark:bg-gray-600;
+}
+
+.drag-handle:active {
+  @apply bg-gray-300 dark:bg-gray-500;
+}
+

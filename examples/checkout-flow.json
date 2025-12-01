@@ -1,0 +1,213 @@
+{
+  "id": "checkout-flow-001",
+  "name": "E-commerce Checkout Flow",
+  "description": "Complete multi-step checkout process for online purchases",
+  "steps": [
+    {
+      "id": "step-1",
+      "title": "Shipping Information",
+      "description": "Where should we ship your order?",
+      "fields": [
+        {
+          "id": "field-shipping-name",
+          "type": "text",
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        {
+          "id": "field-email",
+          "type": "email",
+          "label": "Email Address",
+          "placeholder": "your.email@example.com",
+          "required": true
+        },
+        {
+          "id": "field-phone",
+          "type": "inputmask",
+          "label": "Phone Number",
+          "placeholder": "+1 (555) 123-4567",
+          "required": true
+        },
+        {
+          "id": "field-address",
+          "type": "textarea",
+          "label": "Street Address",
+          "placeholder": "Enter your street address",
+          "required": true,
+          "validation": {
+            "minLength": 5,
+            "maxLength": 200
+          }
+        },
+        {
+          "id": "field-city",
+          "type": "text",
+          "label": "City",
+          "placeholder": "Enter your city",
+          "required": true
+        },
+        {
+          "id": "field-state",
+          "type": "select",
+          "label": "State/Province",
+          "placeholder": "Select state",
+          "required": true,
+          "options": [
+            { "label": "Alabama", "value": "AL" },
+            { "label": "Alaska", "value": "AK" },
+            { "label": "Arizona", "value": "AZ" },
+            { "label": "California", "value": "CA" },
+            { "label": "Colorado", "value": "CO" },
+            { "label": "Florida", "value": "FL" },
+            { "label": "New York", "value": "NY" },
+            { "label": "Texas", "value": "TX" }
+          ]
+        },
+        {
+          "id": "field-zip",
+          "type": "text",
+          "label": "ZIP/Postal Code",
+          "placeholder": "12345",
+          "required": true,
+          "validation": {
+            "minLength": 5,
+            "maxLength": 10
+          }
+        },
+        {
+          "id": "field-country",
+          "type": "select",
+          "label": "Country",
+          "placeholder": "Select country",
+          "required": true,
+          "options": [
+            { "label": "United States", "value": "US" },
+            { "label": "Canada", "value": "CA" },
+            { "label": "United Kingdom", "value": "UK" },
+            { "label": "Australia", "value": "AU" }
+          ]
+        },
+        {
+          "id": "field-shipping-method",
+          "type": "radio",
+          "label": "Shipping Method",
+          "required": true,
+          "options": [
+            { "label": "Standard Shipping (5-7 business days) - Free", "value": "standard" },
+            { "label": "Express Shipping (2-3 business days) - $15.99", "value": "express" },
+            { "label": "Overnight Shipping (1 business day) - $29.99", "value": "overnight" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "step-2",
+      "title": "Payment Information",
+      "description": "Secure payment processing",
+      "fields": [
+        {
+          "id": "field-card-name",
+          "type": "text",
+          "label": "Name on Card",
+          "placeholder": "John Doe",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        {
+          "id": "field-card-number",
+          "type": "inputmask",
+          "label": "Card Number",
+          "placeholder": "1234 5678 9012 3456",
+          "required": true
+        },
+        {
+          "id": "field-expiry",
+          "type": "text",
+          "label": "Expiry Date",
+          "placeholder": "MM/YY",
+          "required": true
+        },
+        {
+          "id": "field-cvv",
+          "type": "inputmask",
+          "label": "CVV",
+          "placeholder": "123",
+          "required": true,
+          "validation": {
+            "minLength": 3,
+            "maxLength": 4
+          }
+        },
+        {
+          "id": "field-billing-same",
+          "type": "checkbox",
+          "label": "Billing address same as shipping address",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "step-3",
+      "title": "Order Review",
+      "description": "Review your order details before submitting",
+      "fields": [
+        {
+          "id": "field-special-instructions",
+          "type": "textarea",
+          "label": "Special Delivery Instructions",
+          "placeholder": "Leave at front door, ring doorbell, etc.",
+          "required": false,
+          "validation": {
+            "maxLength": 500
+          }
+        },
+        {
+          "id": "field-gift",
+          "type": "checkbox",
+          "label": "This is a gift",
+          "required": false
+        },
+        {
+          "id": "field-gift-message",
+          "type": "textarea",
+          "label": "Gift Message",
+          "placeholder": "Enter your gift message",
+          "required": false,
+          "validation": {
+            "maxLength": 200
+          }
+        },
+        {
+          "id": "field-promo-code",
+          "type": "text",
+          "label": "Promo Code",
+          "placeholder": "Enter promo code (optional)",
+          "required": false
+        },
+        {
+          "id": "field-newsletter",
+          "type": "checkbox",
+          "label": "Subscribe to our newsletter for exclusive deals",
+          "required": false
+        },
+        {
+          "id": "field-terms",
+          "type": "checkbox",
+          "label": "I agree to the terms and conditions and privacy policy",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}
+

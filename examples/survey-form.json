@@ -1,0 +1,127 @@
+{
+  "id": "survey-form-001",
+  "name": "Customer Satisfaction Survey",
+  "description": "Help us improve by sharing your feedback",
+  "steps": [
+    {
+      "id": "step-1",
+      "title": "Basic Information",
+      "description": "Tell us about yourself",
+      "fields": [
+        {
+          "id": "field-age",
+          "type": "number",
+          "label": "Age",
+          "required": true,
+          "validation": {
+            "min": 18,
+            "max": 120
+          }
+        },
+        {
+          "id": "field-gender",
+          "type": "select",
+          "label": "Gender",
+          "required": false,
+          "options": [
+            { "label": "Male", "value": "male" },
+            { "label": "Female", "value": "female" },
+            { "label": "Other", "value": "other" },
+            { "label": "Prefer not to say", "value": "prefer-not-to-say" }
+          ]
+        },
+        {
+          "id": "field-country",
+          "type": "select",
+          "label": "Country",
+          "required": true,
+          "options": [
+            { "label": "United States", "value": "us" },
+            { "label": "Canada", "value": "ca" },
+            { "label": "United Kingdom", "value": "uk" },
+            { "label": "Australia", "value": "au" },
+            { "label": "Other", "value": "other" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "step-2",
+      "title": "Satisfaction Rating",
+      "description": "Rate your experience",
+      "fields": [
+        {
+          "id": "field-overall",
+          "type": "rating",
+          "label": "Overall Satisfaction",
+          "required": true,
+          "validation": {
+            "max": 5
+          }
+        },
+        {
+          "id": "field-quality",
+          "type": "slider",
+          "label": "Product Quality",
+          "required": true,
+          "validation": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        {
+          "id": "field-recommend",
+          "type": "radio",
+          "label": "Would you recommend us?",
+          "required": true,
+          "options": [
+            { "label": "Yes, definitely", "value": "yes" },
+            { "label": "Maybe", "value": "maybe" },
+            { "label": "No", "value": "no" }
+          ]
+        },
+        {
+          "id": "field-feedback",
+          "type": "textarea",
+          "label": "Additional Feedback",
+          "placeholder": "Share any additional thoughts...",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "step-3",
+      "title": "Contact Preferences",
+      "description": "How would you like us to contact you?",
+      "fields": [
+        {
+          "id": "field-newsletter",
+          "type": "checkbox",
+          "label": "Subscribe to newsletter",
+          "required": false
+        },
+        {
+          "id": "field-contact-method",
+          "type": "multiselect",
+          "label": "Preferred Contact Methods",
+          "required": false,
+          "options": [
+            { "label": "Email", "value": "email" },
+            { "label": "Phone", "value": "phone" },
+            { "label": "SMS", "value": "sms" },
+            { "label": "Mail", "value": "mail" }
+          ]
+        },
+        {
+          "id": "field-date",
+          "type": "date",
+          "label": "Best time to contact",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}
+
