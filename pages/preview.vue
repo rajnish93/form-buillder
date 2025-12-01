@@ -13,8 +13,8 @@
               @click="toggleDarkMode()"
             >
               <template #icon>
-                <Icon name="heroicons:moon" />
-              </template>
+              <Icon :name="darkMode ? 'heroicons:sun' : 'heroicons:moon'" />
+            </template>
             </Button>
             <Button
               label="Back to Builder"

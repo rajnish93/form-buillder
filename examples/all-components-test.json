@@ -86,9 +86,84 @@
           "placeholder": "Select an option",
           "required": true,
           "options": [
-            { "label": "Option 1", "value": "opt1" },
-            { "label": "Option 2", "value": "opt2" },
-            { "label": "Option 3", "value": "opt3" }
+            {
+              "label": "Documents",
+              "value": "documents",
+              "children": [
+                {
+                  "label": "Work",
+                  "value": "work",
+                  "children": [
+                    {
+                      "label": "Expenses.doc",
+                      "value": "expenses"
+                    },
+                    {
+                      "label": "Resume.doc",
+                      "value": "resume"
+                    }
+                  ]
+                },
+                {
+                  "label": "Home",
+                  "value": "home",
+                  "children": [
+                    {
+                      "label": "Invoices.txt",
+                      "value": "invoices"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Events",
+              "value": "events",
+              "children": [
+                {
+                  "label": "Meeting",
+                  "value": "meeting"
+                },
+                {
+                  "label": "Product Launch",
+                  "value": "launch"
+                }
+              ]
+            },
+            {
+              "label": "Movies",
+              "value": "movies",
+              "children": [
+                {
+                  "label": "Al Pacino",
+                  "value": "pacino",
+                  "children": [
+                    {
+                      "label": "Scarface",
+                      "value": "scarface"
+                    },
+                    {
+                      "label": "Serpico",
+                      "value": "serpico"
+                    }
+                  ]
+                },
+                {
+                  "label": "Robert De Niro",
+                  "value": "deniro",
+                  "children": [
+                    {
+                      "label": "Goodfellas",
+                      "value": "goodfellas"
+                    },
+                    {
+                      "label": "Raging Bull",
+                      "value": "ragingbull"
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -98,11 +173,26 @@
           "placeholder": "Select multiple options",
           "required": false,
           "options": [
-            { "label": "Apple", "value": "apple" },
-            { "label": "Banana", "value": "banana" },
-            { "label": "Cherry", "value": "cherry" },
-            { "label": "Date", "value": "date" },
-            { "label": "Elderberry", "value": "elderberry" }
+            {
+              "label": "Apple",
+              "value": "apple"
+            },
+            {
+              "label": "Banana",
+              "value": "banana"
+            },
+            {
+              "label": "Cherry",
+              "value": "cherry"
+            },
+            {
+              "label": "Date",
+              "value": "date"
+            },
+            {
+              "label": "Elderberry",
+              "value": "elderberry"
+            }
           ]
         },
         {
@@ -111,9 +201,18 @@
           "label": "Radio Buttons",
           "required": true,
           "options": [
-            { "label": "Option A", "value": "a" },
-            { "label": "Option B", "value": "b" },
-            { "label": "Option C", "value": "c" }
+            {
+              "label": "Option A",
+              "value": "a"
+            },
+            {
+              "label": "Option B",
+              "value": "b"
+            },
+            {
+              "label": "Option C",
+              "value": "c"
+            }
           ]
         },
         {
@@ -128,10 +227,22 @@
           "label": "Listbox",
           "required": false,
           "options": [
-            { "label": "Item 1", "value": "item1" },
-            { "label": "Item 2", "value": "item2" },
-            { "label": "Item 3", "value": "item3" },
-            { "label": "Item 4", "value": "item4" }
+            {
+              "label": "Item 1",
+              "value": "item1"
+            },
+            {
+              "label": "Item 2",
+              "value": "item2"
+            },
+            {
+              "label": "Item 3",
+              "value": "item3"
+            },
+            {
+              "label": "Item 4",
+              "value": "item4"
+            }
           ]
         },
         {
@@ -141,11 +252,26 @@
           "placeholder": "Select from tree",
           "required": false,
           "options": [
-            { "label": "Documents", "value": "docs" },
-            { "label": "Pictures", "value": "pics" },
-            { "label": "Videos", "value": "videos" },
-            { "label": "Music", "value": "music" },
-            { "label": "Downloads", "value": "downloads" }
+            {
+              "label": "Documents",
+              "value": "docs"
+            },
+            {
+              "label": "Pictures",
+              "value": "pics"
+            },
+            {
+              "label": "Videos",
+              "value": "videos"
+            },
+            {
+              "label": "Music",
+              "value": "music"
+            },
+            {
+              "label": "Downloads",
+              "value": "downloads"
+            }
           ]
         },
         {
@@ -155,11 +281,26 @@
           "placeholder": "Start typing...",
           "required": false,
           "options": [
-            { "label": "New York", "value": "ny" },
-            { "label": "Los Angeles", "value": "la" },
-            { "label": "Chicago", "value": "chicago" },
-            { "label": "Houston", "value": "houston" },
-            { "label": "Phoenix", "value": "phoenix" }
+            {
+              "label": "New York",
+              "value": "ny"
+            },
+            {
+              "label": "Los Angeles",
+              "value": "la"
+            },
+            {
+              "label": "Chicago",
+              "value": "chicago"
+            },
+            {
+              "label": "Houston",
+              "value": "houston"
+            },
+            {
+              "label": "Phoenix",
+              "value": "phoenix"
+            }
           ]
         }
       ]
@@ -274,4 +415,3 @@
   "createdAt": "2025-01-27T00:00:00.000Z",
   "updatedAt": "2025-01-27T00:00:00.000Z"
 }
-

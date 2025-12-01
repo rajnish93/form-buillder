@@ -608,20 +608,30 @@ const convertToTreeNodes = (options: FieldOption[]): TreeNode[] => {
   }))
 }
 
+const isExternalUpdate = ref(false)
+
 // Watch for modelValue changes to reset form data
 watch(() => props.modelValue, (newValue) => {
   // If modelValue is explicitly empty (cleared), reset formData
   if (newValue && Object.keys(newValue).length === 0) {
     if (Object.keys(formData.value).length > 0) {
+      isExternalUpdate.value = true
       formData.value = {}
       isCleared.value = true
+      nextTick(() => {
+        isExternalUpdate.value = false
+      })
     }
   } else if (newValue) {
     // Check if values are actually different to avoid infinite loops
     const isDifferent = JSON.stringify(newValue) !== JSON.stringify(formData.value)
     if (isDifferent) {
+      isExternalUpdate.value = true
       formData.value = { ...newValue }
       isCleared.value = false
+      nextTick(() => {
+        isExternalUpdate.value = false
+      })
     }
   }
 }, { deep: true })

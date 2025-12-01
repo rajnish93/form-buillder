@@ -22,7 +22,7 @@
               @click="toggleDarkMode()"
             >
               <template #icon>
-                <Icon name="heroicons:moon" />
+                <Icon :name="darkMode ? 'heroicons:sun' : 'heroicons:moon'" />
               </template>
             </Button>
           </ClientOnly>

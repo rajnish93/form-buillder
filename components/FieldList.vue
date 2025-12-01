@@ -306,11 +306,11 @@ const removeAllFields = () => {
 
 const removeStep = () => {
   if (!currentStep.value) return
-  
+  const stepId = currentStep.value.id
   confirm.delete(
     'Are you sure you want to delete this step?',
     () => {
-      const result = removeStepAction(currentStep.value!.id)
+      const result = removeStepAction(stepId)
       if (!result.success) {
         toast.warn('Cannot Remove Step', result.error || 'Cannot remove the last step')
       } else {

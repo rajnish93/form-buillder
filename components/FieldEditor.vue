@@ -302,10 +302,11 @@ const clearSelection = () => {
 
 const deleteField = () => {
   if (!selectedField.value) return
+  const fieldId = selectedField.value.id
   confirm.delete(
     'Are you sure you want to delete this field?',
     () => {
-      removeField(selectedField.value!.id)
+      removeField(fieldId)
       toast.success('Field Deleted', 'Field has been removed successfully.')
     }
   )

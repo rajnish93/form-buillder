@@ -38,6 +38,11 @@ export const useFormBuilderStore = defineStore('formBuilder', () => {
     return currentStep.value?.fields || []
   })
 
+  // Reset selected field when step changes
+  watch(selectedStepId, () => {
+    selectedFieldId.value = null
+  })
+
   const selectedField = computed((): FormField | undefined => {
     if (!selectedFieldId.value) return undefined
     return currentFields.value.find(field => field.id === selectedFieldId.value)
@@ -81,7 +86,7 @@ export const useFormBuilderStore = defineStore('formBuilder', () => {
     // Create a new array to avoid direct mutation issues
     const updatedFields = step.fields.filter(field => field.id !== fieldId)
     step.fields = updatedFields
-    
+
     if (selectedFieldId.value === fieldId) {
       selectedFieldId.value = null
     }
@@ -152,7 +157,7 @@ export const useFormBuilderStore = defineStore('formBuilder', () => {
     const currentOption = field.options[optionIndex]
     if (!currentOption) return
 
-    field.options[optionIndex] = { 
+    field.options[optionIndex] = {
       label: updates.label ?? currentOption.label,
       value: updates.value ?? currentOption.value
     }
@@ -193,7 +198,7 @@ export const useFormBuilderStore = defineStore('formBuilder', () => {
     }
 
     schema.value.steps = schema.value.steps.filter(step => step.id !== stepId)
-    
+
     // If the removed step was selected, select another step
     if (selectedStepId.value === stepId) {
       // Try to select the step at the same index, or the previous one, or the first one
@@ -203,7 +208,7 @@ export const useFormBuilderStore = defineStore('formBuilder', () => {
         selectedStepId.value = newStep.id
       }
     }
-    
+
     updateTimestamp()
     return { success: true }
   }
@@ -225,15 +230,15 @@ export const useFormBuilderStore = defineStore('formBuilder', () => {
     try {
       isImporting.value = true
       const parsed = JSON.parse(json)
-      
+
       // Validate schema with Zod
       const validated = FormSchemaSchema.parse(parsed) as FormSchema
-      
+
       schema.value = validated
       selectedStepId.value = validated.steps[0]?.id || 'step-1'
       selectedFieldId.value = null
       updateTimestamp()
-      
+
       // Reset flag after reactive updates settle
       // Use requestAnimationFrame to ensure DOM updates complete
       requestAnimationFrame(() => {
@@ -241,13 +246,13 @@ export const useFormBuilderStore = defineStore('formBuilder', () => {
           isImporting.value = false
         }, 200)
       })
-      
+
       return { success: true }
     } catch (error: any) {
       isImporting.value = false
-      return { 
-        success: false, 
-        error: error.message || 'Invalid schema format' 
+      return {
+        success: false,
+        error: error.message || 'Invalid schema format'
       }
     }
   }

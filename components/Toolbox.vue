@@ -5,7 +5,7 @@
         Field Types
       </h2>
       <p class="text-sm text-gray-600 dark:text-gray-400">
-        Drag or click to add fields
+        Click to add fields
       </p>
     </div>
 
