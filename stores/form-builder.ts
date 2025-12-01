@@ -258,16 +258,22 @@ export const useFormBuilderStore = defineStore('formBuilder', () => {
   }
 
   const exportSchema = () => {
-    const json = schemaJson.value
-    const blob = new Blob([json], { type: 'application/json' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `${schema.value.name || 'form'}-${Date.now()}.json`
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-    URL.revokeObjectURL(url)
+    if (typeof document === 'undefined') return
+
+    try {
+      const json = schemaJson.value
+      const blob = new Blob([json], { type: 'application/json' })
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = `${schema.value.name || 'form'}-${Date.now()}.json`
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      URL.revokeObjectURL(url)
+    } catch (error) {
+      console.error('Failed to export schema:', error)
+    }
   }
 
   const toggleDarkMode = () => {
