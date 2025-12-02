@@ -1,0 +1,53 @@
+{
+  "id": "contact-form-001",
+  "name": "Contact Form",
+  "description": "A simple contact form with name, email, and message fields",
+  "steps": [
+    {
+      "id": "step-1",
+      "title": "Contact Information",
+      "description": "Please provide your contact details",
+      "fields": [
+        {
+          "id": "field-name",
+          "type": "text",
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        {
+          "id": "field-email",
+          "type": "email",
+          "label": "Email Address",
+          "placeholder": "your.email@example.com",
+          "required": true
+        },
+        {
+          "id": "field-phone",
+          "type": "text",
+          "label": "Phone Number",
+          "placeholder": "+1 (555) 123-4567",
+          "required": false
+        },
+        {
+          "id": "field-message",
+          "type": "textarea",
+          "label": "Message",
+          "placeholder": "Enter your message here...",
+          "required": true,
+          "validation": {
+            "minLength": 10,
+            "maxLength": 1000
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}
+

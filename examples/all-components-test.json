@@ -1,0 +1,417 @@
+{
+  "id": "all-components-test-001",
+  "name": "Complete Component Test Form",
+  "description": "Comprehensive form testing all available field types in the form builder",
+  "steps": [
+    {
+      "id": "step-1",
+      "title": "Text Input Fields",
+      "description": "Testing all text-based input components",
+      "fields": [
+        {
+          "id": "field-text",
+          "type": "text",
+          "label": "Text Input",
+          "placeholder": "Enter text here",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 50
+          }
+        },
+        {
+          "id": "field-textarea",
+          "type": "textarea",
+          "label": "Textarea",
+          "placeholder": "Enter multi-line text here",
+          "required": true,
+          "validation": {
+            "minLength": 10,
+            "maxLength": 500
+          }
+        },
+        {
+          "id": "field-email",
+          "type": "email",
+          "label": "Email Input",
+          "placeholder": "your.email@example.com",
+          "required": true
+        },
+        {
+          "id": "field-password",
+          "type": "password",
+          "label": "Password Input",
+          "placeholder": "Enter password",
+          "required": true
+        },
+        {
+          "id": "field-inputmask",
+          "type": "inputmask",
+          "label": "Input Mask (Phone)",
+          "placeholder": "(999) 999-9999",
+          "required": false,
+          "validation": {
+            "pattern": "(999) 999-9999"
+          }
+        },
+        {
+          "id": "field-inputnumber",
+          "type": "inputnumber",
+          "label": "Input Number",
+          "placeholder": "Enter a number",
+          "required": false,
+          "validation": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        {
+          "id": "field-chips",
+          "type": "chips",
+          "label": "Chips Input",
+          "placeholder": "Add tags or items",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "step-2",
+      "title": "Selection Fields",
+      "description": "Testing all selection-based components",
+      "fields": [
+        {
+          "id": "field-select",
+          "type": "select",
+          "label": "Select Dropdown",
+          "placeholder": "Select an option",
+          "required": true,
+          "options": [
+            {
+              "label": "Documents",
+              "value": "documents",
+              "children": [
+                {
+                  "label": "Work",
+                  "value": "work",
+                  "children": [
+                    {
+                      "label": "Expenses.doc",
+                      "value": "expenses"
+                    },
+                    {
+                      "label": "Resume.doc",
+                      "value": "resume"
+                    }
+                  ]
+                },
+                {
+                  "label": "Home",
+                  "value": "home",
+                  "children": [
+                    {
+                      "label": "Invoices.txt",
+                      "value": "invoices"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Events",
+              "value": "events",
+              "children": [
+                {
+                  "label": "Meeting",
+                  "value": "meeting"
+                },
+                {
+                  "label": "Product Launch",
+                  "value": "launch"
+                }
+              ]
+            },
+            {
+              "label": "Movies",
+              "value": "movies",
+              "children": [
+                {
+                  "label": "Al Pacino",
+                  "value": "pacino",
+                  "children": [
+                    {
+                      "label": "Scarface",
+                      "value": "scarface"
+                    },
+                    {
+                      "label": "Serpico",
+                      "value": "serpico"
+                    }
+                  ]
+                },
+                {
+                  "label": "Robert De Niro",
+                  "value": "deniro",
+                  "children": [
+                    {
+                      "label": "Goodfellas",
+                      "value": "goodfellas"
+                    },
+                    {
+                      "label": "Raging Bull",
+                      "value": "ragingbull"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "field-multiselect",
+          "type": "multiselect",
+          "label": "Multi Select",
+          "placeholder": "Select multiple options",
+          "required": false,
+          "options": [
+            {
+              "label": "Apple",
+              "value": "apple"
+            },
+            {
+              "label": "Banana",
+              "value": "banana"
+            },
+            {
+              "label": "Cherry",
+              "value": "cherry"
+            },
+            {
+              "label": "Date",
+              "value": "date"
+            },
+            {
+              "label": "Elderberry",
+              "value": "elderberry"
+            }
+          ]
+        },
+        {
+          "id": "field-radio",
+          "type": "radio",
+          "label": "Radio Buttons",
+          "required": true,
+          "options": [
+            {
+              "label": "Option A",
+              "value": "a"
+            },
+            {
+              "label": "Option B",
+              "value": "b"
+            },
+            {
+              "label": "Option C",
+              "value": "c"
+            }
+          ]
+        },
+        {
+          "id": "field-checkbox",
+          "type": "checkbox",
+          "label": "Checkbox",
+          "required": false
+        },
+        {
+          "id": "field-listbox",
+          "type": "listbox",
+          "label": "Listbox",
+          "required": false,
+          "options": [
+            {
+              "label": "Item 1",
+              "value": "item1"
+            },
+            {
+              "label": "Item 2",
+              "value": "item2"
+            },
+            {
+              "label": "Item 3",
+              "value": "item3"
+            },
+            {
+              "label": "Item 4",
+              "value": "item4"
+            }
+          ]
+        },
+        {
+          "id": "field-treeselect",
+          "type": "treeselect",
+          "label": "Tree Select",
+          "placeholder": "Select from tree",
+          "required": false,
+          "options": [
+            {
+              "label": "Documents",
+              "value": "docs"
+            },
+            {
+              "label": "Pictures",
+              "value": "pics"
+            },
+            {
+              "label": "Videos",
+              "value": "videos"
+            },
+            {
+              "label": "Music",
+              "value": "music"
+            },
+            {
+              "label": "Downloads",
+              "value": "downloads"
+            }
+          ]
+        },
+        {
+          "id": "field-autocomplete",
+          "type": "autocomplete",
+          "label": "Autocomplete",
+          "placeholder": "Start typing...",
+          "required": false,
+          "options": [
+            {
+              "label": "New York",
+              "value": "ny"
+            },
+            {
+              "label": "Los Angeles",
+              "value": "la"
+            },
+            {
+              "label": "Chicago",
+              "value": "chicago"
+            },
+            {
+              "label": "Houston",
+              "value": "houston"
+            },
+            {
+              "label": "Phoenix",
+              "value": "phoenix"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "step-3",
+      "title": "Date & Time Fields",
+      "description": "Testing all date and time picker components",
+      "fields": [
+        {
+          "id": "field-date",
+          "type": "date",
+          "label": "Date Picker",
+          "placeholder": "Select date",
+          "required": true
+        },
+        {
+          "id": "field-time",
+          "type": "time",
+          "label": "Time Picker",
+          "placeholder": "Select time",
+          "required": false
+        },
+        {
+          "id": "field-datetime",
+          "type": "datetime",
+          "label": "Date & Time Picker",
+          "placeholder": "Select date and time",
+          "required": false
+        },
+        {
+          "id": "field-calendar",
+          "type": "calendar",
+          "label": "Calendar",
+          "placeholder": "Select date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "step-4",
+      "title": "Advanced Controls",
+      "description": "Testing advanced input and control components",
+      "fields": [
+        {
+          "id": "field-number",
+          "type": "number",
+          "label": "Number Input",
+          "placeholder": "Enter a number",
+          "required": false,
+          "validation": {
+            "min": 1,
+            "max": 1000
+          }
+        },
+        {
+          "id": "field-slider",
+          "type": "slider",
+          "label": "Slider",
+          "required": false,
+          "validation": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        {
+          "id": "field-knob",
+          "type": "knob",
+          "label": "Knob Control",
+          "required": false,
+          "validation": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        {
+          "id": "field-rating",
+          "type": "rating",
+          "label": "Rating",
+          "required": false,
+          "validation": {
+            "max": 5
+          }
+        },
+        {
+          "id": "field-switch",
+          "type": "switch",
+          "label": "Switch Toggle",
+          "required": false
+        },
+        {
+          "id": "field-togglebutton",
+          "type": "togglebutton",
+          "label": "Toggle Button",
+          "required": false
+        },
+        {
+          "id": "field-color",
+          "type": "color",
+          "label": "Color Picker",
+          "required": false
+        },
+        {
+          "id": "field-file",
+          "type": "file",
+          "label": "File Upload",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "createdAt": "2025-01-27T00:00:00.000Z",
+  "updatedAt": "2025-01-27T00:00:00.000Z"
+}

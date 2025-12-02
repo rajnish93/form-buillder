@@ -1,0 +1,73 @@
+{
+  "id": "contact-form-detailed",
+  "name": "Contact Form",
+  "description": "A simple contact form with name, email, subject, and message",
+  "steps": [
+    {
+      "id": "step-1",
+      "title": "Contact Information",
+      "description": "Please fill out the form below and we'll get back to you soon.",
+      "fields": [
+        {
+          "id": "field-name",
+          "type": "text",
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        {
+          "id": "field-email",
+          "type": "email",
+          "label": "Email Address",
+          "placeholder": "your.email@example.com",
+          "required": true
+        },
+        {
+          "id": "field-phone",
+          "type": "inputmask",
+          "label": "Phone Number",
+          "placeholder": "+1 (555) 123-4567",
+          "required": false
+        },
+        {
+          "id": "field-subject",
+          "type": "select",
+          "label": "Subject",
+          "placeholder": "Select a subject",
+          "required": true,
+          "options": [
+            { "label": "General Inquiry", "value": "general" },
+            { "label": "Support Request", "value": "support" },
+            { "label": "Sales Question", "value": "sales" },
+            { "label": "Partnership", "value": "partnership" },
+            { "label": "Other", "value": "other" }
+          ]
+        },
+        {
+          "id": "field-message",
+          "type": "textarea",
+          "label": "Message",
+          "placeholder": "Enter your message here...",
+          "required": true,
+          "validation": {
+            "minLength": 10,
+            "maxLength": 1000
+          }
+        },
+        {
+          "id": "field-newsletter",
+          "type": "checkbox",
+          "label": "Subscribe to our newsletter",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}
+
